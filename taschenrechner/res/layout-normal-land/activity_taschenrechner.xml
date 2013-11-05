@@ -1,0 +1,237 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black">
+    
+	<TableLayout
+	    android:id="@+id/tableLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@android:color/black" >
+
+	    <TextView
+	        android:id="@+id/ergebnis"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textColor="@android:color/white"
+	        android:text="@string/ergebnisanzeige"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	         />
+	        
+	
+	    <TableRow
+	        android:id="@+id/tableRow1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        >
+	
+	        <Button
+	            android:id="@+id/delete"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:background="@color/button_color_delete"
+				android:layout_margin="1dp"
+	            android:text="@string/delete" />
+	    </TableRow>
+	
+	    <TableRow
+	        android:id="@+id/tableRow6"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        >
+	
+	        <Button
+	            android:id="@+id/button_sieben"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	           android:layout_weight="1"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/sieben" />
+	
+	        <Button
+	            android:id="@+id/Button_acht"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="1"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/acht" />
+	
+	        <Button
+	            android:id="@+id/Button_neun"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	          	android:layout_weight="1"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/neun" />
+	
+	        <Button
+	            android:id="@+id/Button_div"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	          	android:layout_weight="1"
+	            android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/division" />
+	    </TableRow>
+	
+	    <TableRow
+	        android:id="@+id/tableRow3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        >
+	
+	        <Button
+	            android:id="@+id/Button_vier"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/vier" />
+	
+	        <Button
+	            android:id="@+id/Button_fuenf"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/fuenf" />
+	
+	        <Button
+	            android:id="@+id/Button_sechs"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/sechs" />
+	
+	        <Button
+	            android:id="@+id/Button_plus"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/plus" />
+	    </TableRow>
+	
+	    <TableRow
+	        android:id="@+id/tableRow4"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	         >
+	
+	        <Button
+	            android:id="@+id/Button_eins"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/eins" />
+	
+	        <Button
+	            android:id="@+id/Button_zwei"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/zwei" />
+	
+	        <Button
+	            android:id="@+id/Button_drei"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color_figure"
+				android:layout_margin="1dp"
+	            android:text="@string/drei" />
+	
+	        <Button
+	            android:id="@+id/Button_sub"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/subtraktion" />
+	    </TableRow>
+	
+	    <TableRow
+	        android:id="@+id/tableRow5"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	         >
+	
+	        <Button
+	            android:id="@+id/Button_null"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color_figure"
+	            android:layout_margin="1dp"
+	            android:text="@string/zero" />
+	
+	        <Button
+	            android:id="@+id/Button_punkt"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+				android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/punkt" />
+	
+	        <Button
+	            android:id="@+id/Button_mul"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/multiplikation" />
+	
+	        <Button
+	            android:id="@+id/Button_gleich"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/gleich" />
+	        
+	    </TableRow>
+	    
+	    <TableRow
+	        android:id="@+id/tableRow_brackets"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	         >
+	        
+	        <Button
+	            android:id="@+id/Button_bracket_open"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/open_bracket" />
+	        
+	        <Button
+	            android:id="@+id/Button_bracket_close"
+	            android:layout_width="@dimen/normal_land_button_width"
+	            android:layout_height="@dimen/normal_land_button_height"
+	            android:layout_weight="0.25"
+	            android:background="@color/button_color"
+				android:layout_margin="1dp"
+	            android:text="@string/close_bracket" />
+	   
+	    </TableRow>
+	        
+	</TableLayout>
+</ScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/weitere"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/weitere">
+    
+    <menu> 
+    	    <item
+    	         android:id="@+id/sinus"
+    	         android:title="@string/sinus"/>
+    	    <item 
+    	         android:id="@+id/cosinus"
+    	         android:title="@string/cosinus"/>
+    	    <item 
+    	         android:id="@+id/tangens"
+    	         android:title="@string/tangens"/>
+    	    <item 
+    	         android:id="@+id/quadrat"
+    	         android:title="@string/quadrat"/>
+    	    </menu>
+    	    
+    </item>
+    
+</menu>

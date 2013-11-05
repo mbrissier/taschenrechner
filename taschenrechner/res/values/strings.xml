@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">taschenrechner</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ergebnisanzeige">Ergebnisanzeige</string>
+    <string name="acht">8</string>
+    <string name="neun">9</string>
+    <string name="sieben">7</string>
+    <string name="division">/</string>
+    <string name="fuenf">5</string>
+    <string name="vier">4</string>
+    <string name="multiplikation">x</string>
+    <string name="sechs">6</string>
+    <string name="eins">1</string>
+    <string name="zwei">2</string>
+    <string name="subtraktion">-</string>
+    <string name="drei">3</string>
+    <string name="plus">+</string>
+    <string name="gleich">=</string>
+    <string name="punkt">.</string>
+    <string name="zero">0</string>
+    <string name="delete">del</string>
+    <string name="weitere">Weitere</string>
+    <string name="sinus">Sinus</string>
+    <string name="cosinus">Cosinus</string>
+    <string name="tangens">Tangens</string>
+    <string name="quadrat">Quadrat</string>
+    <string name="open_bracket">(</string>
+    <string name="close_bracket">)</string>
+    
+    
+
+    
+
+</resources>
