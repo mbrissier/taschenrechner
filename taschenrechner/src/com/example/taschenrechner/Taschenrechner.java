@@ -1,5 +1,8 @@
 package com.example.taschenrechner;
 
+import de.congrace.exp4j.Calculable;
+import de.congrace.exp4j.ExpressionBuilder;
+import de.congrace.exp4j.UnknownFunctionException;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -12,9 +15,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import android.widget.Toast;
-import de.congrace.exp4j.Calculable;
-import de.congrace.exp4j.ExpressionBuilder;
-import de.congrace.exp4j.UnknownFunctionException;
 
 /**
  * Einfache Implementierung eines Taschenrechners
@@ -93,6 +93,8 @@ public class Taschenrechner extends Activity
 			}catch(Exception e)
 			{	
 				e.printStackTrace();
+				
+				
 				Toast.makeText(Taschenrechner.this,"Keine Auswertung moeglich!",Toast.LENGTH_LONG).show();
 			}
 		}
@@ -102,7 +104,6 @@ public class Taschenrechner extends Activity
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-		
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_taschenrechner);
@@ -173,119 +174,87 @@ public class Taschenrechner extends Activity
      	closebutton = (Button) findViewById(R.id.Button_bracket_close);
      	closebutton.setOnClickListener(closeListener);
      	
-
-     	
-     	
+     	Configuration conf = getResources().getConfiguration();
+     	if ((conf.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) == Configuration.SCREENLAYOUT_SIZE_XLARGE) 
+     	{
+	     	sinusbutton = (Button) findViewById(R.id.Button_sinus);
+	     	sinusbutton.setOnClickListener(sinusListener);
+	     	
+	     	cosinusbutton = (Button) findViewById(R.id.Button_cosinus);
+	     	cosinusbutton.setOnClickListener(cosinusListener);
+	     	
+	     	tangensbutton = (Button) findViewById(R.id.Button_tangens);
+	     	tangensbutton.setOnClickListener(tangensListener);
+	     	
+	     	quadratbutton = (Button) findViewById(R.id.Button_quadrat);
+	        quadratbutton.setOnClickListener(quadratListener);
+     	}
 	}
+		
+	OnClickListener sinusListener = new OnClickListener()
+	{
+		public void onClick(View v)
+		{
+			dottable = true;
+	    	
+	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
+				ergebnisanzeige.setText(SIN);
+	    		ergebnisanzeige.append(OPEN_BRACKET);
+	    	} else {
+				ergebnisanzeige.append(SIN);
+				ergebnisanzeige.append(OPEN_BRACKET);
+			}
+		}
+	};
 	
-//	Configuration conf = getResources().getConfiguration(){ 
-//	
-//
-//	if (conf.screenLayout == Configuration.SCREENLAYOUT_SIZE_XLARGE) {
-//		
-//		OnClickListener sinusListener = new View.OnClickListener()
-//    	{
-//    		public void onClick(View v)
-//    		{
-//    			dottable = true;
-//    	    	
-//    	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
-//    				ergebnisanzeige.setText(SIN);
-//    	    		ergebnisanzeige.append(OPEN_BRACKET);
-//    	    	} else {
-//    				ergebnisanzeige.append(SIN);
-//    				ergebnisanzeige.append(OPEN_BRACKET);
-//    			}
-//    		}
-//    	};
-//    	
-//    	OnClickListener cosinusListener = new View.OnClickListener()
-//    	{
-//    		public void onClick(View v)
-//    		{
-//    			dottable = true;
-//    	    	
-//    	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
-//    				ergebnisanzeige.setText(COS);
-//    	    		ergebnisanzeige.append(OPEN_BRACKET);
-//    	    	} else {
-//    				ergebnisanzeige.append(COS);
-//    				ergebnisanzeige.append(OPEN_BRACKET);
-//    			}
-//    		}
-//    	};
-//    	
-//    	OnClickListener tangensListener = new View.OnClickListener()
-//    	{
-//    		public void onClick(View v)
-//    		{
-//    			dottable = true;
-//    	    	
-//    	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
-//    				ergebnisanzeige.setText(TAN);
-//    	    		ergebnisanzeige.append(OPEN_BRACKET);
-//    	    	} else {
-//    				ergebnisanzeige.append(TAN);
-//    				ergebnisanzeige.append(OPEN_BRACKET);
-//    			}
-//    		}
-//    	};
-//    	
-//    	OnClickListener quadratListener = new View.OnClickListener()
-//    	{
-//    		public void onClick(View v)
-//    		{
-//    			dottable = true;
-//    	    	
-//    	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
-//    				ergebnisanzeige.setText(POWER);
-//    	    		ergebnisanzeige.append(OPEN_BRACKET);
-//    	    	} else {
-//    				ergebnisanzeige.append(POWER);
-//    				ergebnisanzeige.append(OPEN_BRACKET);
-//    			}
-//    		}
-//    	};
-//			
-//			
-//			
-//			sinusbutton = (Button) findViewById(R.id.Button_sinus);
-//	     	sinusbutton.setOnClickListener(sinusListener);
-//	     	
-//	     	cosinusbutton = (Button) findViewById(R.id.Button_cosinus);
-//	     	cosinusbutton.setOnClickListener(cosinusListener);
-//	     	
-//	     	tangensbutton = (Button) findViewById(R.id.Button_tangens);
-//	     	tangensbutton.setOnClickListener(tangensListener);
-//	     	
-//	     	quadratbutton = (Button) findViewById(R.id.Button_quadrat);
-//	        quadratbutton.setOnClickListener(quadratListener);
-//	        
-//	}
-//		
-		
-		
-//	switch (conf.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) {
-//	
-//	
-//		case Configuration.SCREENLAYOUT_SIZE_NORMAL: {
-//			
-//			
-//			break; 	}
-//			
-//		case Configuration.SCREENLAYOUT_SIZE_XLARGE: {
-//			
-//			
-//			
-//			break; 	} 
-//		
-//		default: {
-//			
-//			break;  }
-//		
-//	}
-//	
-//	}
+	OnClickListener cosinusListener = new OnClickListener()
+	{
+		public void onClick(View v)
+		{
+			dottable = true;
+	    	
+	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
+				ergebnisanzeige.setText(COS);
+	    		ergebnisanzeige.append(OPEN_BRACKET);
+	    	} else {
+				ergebnisanzeige.append(COS);
+				ergebnisanzeige.append(OPEN_BRACKET);
+			}
+		}
+	};
+	
+	OnClickListener tangensListener = new OnClickListener()
+	{
+		public void onClick(View v)
+		{
+			dottable = true;
+	    	
+	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
+				ergebnisanzeige.setText(TAN);
+	    		ergebnisanzeige.append(OPEN_BRACKET);
+	    	} else {
+				ergebnisanzeige.append(TAN);
+				ergebnisanzeige.append(OPEN_BRACKET);
+			}
+		}
+	};
+	
+	OnClickListener quadratListener = new OnClickListener()
+	{
+		public void onClick(View v)
+		{
+			dottable = true;
+	    	
+	    	if(ergebnisanzeige.getText().toString().equals(ZERO)) {
+				ergebnisanzeige.setText(POWER);
+	    		ergebnisanzeige.append(OPEN_BRACKET);
+	    	} else {
+				ergebnisanzeige.append(POWER);
+				ergebnisanzeige.append(OPEN_BRACKET);
+			}
+		}
+	};
+
 
 	
 	@Override
